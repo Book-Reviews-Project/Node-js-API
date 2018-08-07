@@ -1,4 +1,5 @@
 const http = require('http');
+const dotenv = require('dotenv').config();
 const app = require('../app'); // The express app we just created
 
 const port = parseInt(process.env.PORT, 10) || 8000;
