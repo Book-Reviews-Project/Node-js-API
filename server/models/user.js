@@ -14,13 +14,7 @@ module.exports = (sequelize, DataTypes) => {
 			defaultValue: 'https://i.imgur.com/xGix4Fo.png',
 		},
 		password: {
-			type: DataTypes.STRING(30),
-			validate: {
-				len: {
-					args: [8, 30],
-					msg: 'password must be longer than 8 and less than 30!'
-				}
-			}
+			type: DataTypes.STRING,
 		},
 		email: {
 			type: DataTypes.STRING(30),
