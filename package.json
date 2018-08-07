@@ -10,6 +10,7 @@
     "start:dev": "nodemon ./bin/www",
     "sequelize:init": "sudo sequelize init",
     "sequelize:migrate": "sudo sequelize db:migrate",
+    "sequelize:migrate:undo:all": "sudo sequelize db:migrate:undo:all",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,6 +25,7 @@
   },
   "homepage": "https://github.com/Book-Reviews-Project/Node-js-API#readme",
   "dependencies": {
+    "bcrypt": "^3.0.0",
     "body-parser": "^1.18.3",
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
@@ -34,6 +36,7 @@
   "devDependencies": {
     "eslint": "^5.3.0",
     "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-security": "^1.4.0",
     "nodemon": "^1.18.3",
     "sequelize-cli": "^4.0.0"
   }
