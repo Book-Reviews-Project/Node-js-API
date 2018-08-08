@@ -3,13 +3,17 @@
         "es6": true,
         "node": true
     },
-    "extends":  ["eslint:recommended", "plugin:node/recommended"],
+    "extends":  [
+        "eslint:recommended",
+        "plugin:node/recommended",
+        "plugin:security/recommended"],
     "parserOptions": {
         "ecmaVersion": 2018,
         "sourceType": "module"
     },
     "plugins": [
-        "eslint-plugin-node"
+        "eslint-plugin-node",
+        "security"
     ],
     "rules": {
         "indent": [
