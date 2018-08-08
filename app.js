@@ -2,6 +2,7 @@ const express = require('express');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 const userRoutes = require('./server/routes').UserRouter;
+const reviewRoutes = require('./server/routes').ReviewRouter;
 
 // Set up the express app
 const app = express();
@@ -30,6 +31,7 @@ app.use((req, res, next) => {
 
 // use routes
 app.use('/api/v1/user', userRoutes);
+app.use('/api/v1/review', reviewRoutes);
 
 app.use((req, res) => {
 	res.status(404).json({
