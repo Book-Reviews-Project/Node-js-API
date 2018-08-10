@@ -1,5 +1,3 @@
-const dotenv = require('dotenv').config(); // eslint-disable-line no-unused-vars
-
 module.exports = {
 	development: {
 		username: process.env.DB_USER,

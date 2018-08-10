@@ -79,7 +79,7 @@ module.exports = (encryptUtils, tokenUtils, User) => {
 
 				if(!user) {
 					return res.status(404).json({
-						messgae: 'No such user'
+						message: 'No such user'
 					});
 				}
 

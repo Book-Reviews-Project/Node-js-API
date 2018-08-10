@@ -1,11 +1,11 @@
 {
     "env": {
         "es6": true,
-        "node": true
+        "node": true,
+        "mocha": true
     },
     "extends":  [
         "eslint:recommended",
-        "plugin:node/recommended",
         "plugin:security/recommended"],
     "parserOptions": {
         "ecmaVersion": 2018,
@@ -13,7 +13,8 @@
     },
     "plugins": [
         "eslint-plugin-node",
-        "security"
+        "security",
+        "mocha"
     ],
     "rules": {
         "indent": [
@@ -31,6 +32,14 @@
         "semi": [
             "error",
             "always"
-        ]
+        ],
+        "mocha/no-exclusive-tests": "error",
+        "node/no-unpublished-import": ["error", {
+            "allowModules": [
+                "chai",
+                "sinon-chai",
+                "sequelize-test-helpers"
+            ]
+        }]
     }
 }
